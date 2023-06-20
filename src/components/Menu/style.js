@@ -48,8 +48,6 @@ const AllLinkswrapper = styled.div`
   top: 29px;
 `;
 
-const LinkWrapper = styled.div``;
-
 const Links = styled(Link)`
   display: flex;
   align-items: center;
@@ -71,6 +69,5 @@ export {
   SaleReportWrapper,
   SaleReportSecond,
   AllLinkswrapper,
-  LinkWrapper,
   Links,
 };

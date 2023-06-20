@@ -9,6 +9,8 @@ import {
   // LinkWrapper,
   Links,
 } from "./style";
+import Sales from "../Sales";
+import { Routes, Route } from "react-router-dom";
 
 function Menu() {
   return (
@@ -20,7 +22,10 @@ function Menu() {
           <SaleReportSecond>Безнал:{}₽</SaleReportSecond>
         </SaleReportWrapper>
         <AllLinkswrapper>
-          <Links>Приход</Links>
+          <Links to={"/Sales"}>Приход</Links>
+          <Routes>
+            <Route path="/Sales" component={<Sales />} />
+          </Routes>
           <Links>История Продажи</Links>
           <Links>Отход</Links>
           <Links>Заказ</Links>

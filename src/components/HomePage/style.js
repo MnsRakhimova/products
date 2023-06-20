@@ -9,25 +9,29 @@ const Wrapper = styled.div`
 `;
 
 const MenuBar = styled.div`
-  position: fixed;
+  /* position: fixed; */
   width: 51px;
   height: 100vh;
   background-color: #d9d9d9;
+  flex-grow: 0.03;
 `;
 
 const CashRegister = styled.div`
-  position: fixed;
+  display: flex;
+  /* position: fixed; */
   right: 0;
   width: 181px;
   height: 100vh;
   background-color: #e5f1f0;
+  flex-grow: 0.03;
+  z-index: 2;
 `;
 
 const CashRegisterLittle = styled.div`
   position: absolute;
   top: 3px;
-  left: 9px;
-  width: 135px;
+  right: 9px;
+  width: 160px;
   height: 65px;
   background-color: #e1ffdf;
   border: 1px solid #000000;
@@ -57,8 +61,10 @@ const Product = styled.div`
   gap: 7px;
   flex-direction: row;
   flex-wrap: wrap;
-  left: 71px;
+  left: 7px;
+  right: 7px;
   top: 35px;
+  flex-grow: 6;
 `;
 
 const IconWrapper = styled.div`
@@ -67,7 +73,7 @@ const IconWrapper = styled.div`
   top: 13px;
   left: 4px;
   width: 199px;
-  height: 306px;
+  height: 330px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24);
   border-radius: 8px;
   background-color: #ffffff;
@@ -89,13 +95,12 @@ const SaleReportWrapper = styled.div`
 `;
 
 const SaleReport = styled.h1`
-  font-size: 17px;
+  font-size: 13px;
 `;
 
 const SaleReportSecond = styled.h1`
-  padding-top: 2px;
   font-family: "Rubik", sans-serif;
-  font-size: 13px;
+  font-size: 11px;
   color: ${({ blue }) => (blue ? "#3423BB" : "#04AB0B")};
 `;
 
@@ -116,13 +121,43 @@ const Links = styled(Link)`
   /* justify-content: center; */
   width: 191px;
   height: 40px;
-  margin: 4px;
+  margin: 4px 0;
   font-size: 17px;
   font-weight: 500;
   color: black;
   text-decoration: none;
   background-color: aliceblue;
 `;
+
+const ProductImageWrapper = styled.div`
+  position: relative;
+  width: 99px;
+  height: 59px;
+  border: 1px solid #4a909a;
+  border-radius: 8px;
+`;
+
+const ProductsImage = styled.img`
+  width: 100%;
+`;
+
+const ProductPrice = styled.h1`
+  position: absolute;
+  font-weight: 800;
+  font-size: 10px;
+  color: #057a1f;
+  top: 2px;
+  left: 2px;
+`;
+
+const ProductName = styled.h1`
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  color: #274303;
+`;
+
+const ProductData = styled.div``;
 
 export {
   IconWrapper,
@@ -141,4 +176,9 @@ export {
   TextWrapperInCashRegister,
   Product,
   MenuIcon,
+  ProductImageWrapper,
+  ProductsImage,
+  ProductPrice,
+  ProductName,
+  ProductData,
 };

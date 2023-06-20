@@ -1,7 +1,7 @@
 import React from "react";
-import HomePage from "../HomePage";
+import HomePage from "../components/HomePage";
 import LogIn from "../log in";
-
+import { Product } from "../components/HomePage/style";
 import { Routes, Route } from "react-router-dom";
 
 const Root = () => {
@@ -10,6 +10,7 @@ const Root = () => {
       <Routes>
         <Route exact path="/" element={<LogIn />} />
         <Route path="/Entry" element={<HomePage />} />
+        <Route path="/products" element={<Product />} />
       </Routes>
     </div>
   );
