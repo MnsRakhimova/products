@@ -3,6 +3,7 @@ import { styled } from "styled-components";
 
 const Wrapper = styled.div`
   position: relative;
+  top: 40%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -11,7 +12,7 @@ const Wrapper = styled.div`
 `;
 
 const Entry = styled.h1`
-  position: absolute;
+  /* position: absolute; */
   font-style: normal;
   font-size: 15px;
   font-weight: 700;
@@ -20,9 +21,11 @@ const Entry = styled.h1`
 `;
 
 const LogoImage = styled.img`
-  position: absolute;
-  top: 22px;
   width: 10%;
+  /* height: 81px;   */
+  /* position: absolute;
+  top: 22px;
+  width: 10%; */
 `;
 
 const Maga = styled.h1`
@@ -34,30 +37,36 @@ const Maga = styled.h1`
 `;
 
 const Login = styled.input`
-  position: absolute;
-  top: 129px;
+  /* position: absolute; */
+  /* top: 129px; */
   /* left: 42.3%;
   top: 53%; */
-  width: 17%;
+  margin: 10px 0 0 0;
+  width: 14%;
 `;
 
 const Password = styled.input`
-  position: absolute;
+  /* position: absolute;
   width: 17%;
-  top: 155px;
+  top: 155px; */
+  margin: 10px 0;
+  width: 14%;
 `;
 
 const Btn = styled(Link)`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  top: 190px;
+  /* position: absolute;
+  top: 190px; */
   width: 126px;
   height: 44px;
   text-decoration: none;
 
-  background: #2678f3;
+  /* background: conic-gradient(#bf8130, #bfb830); */
+  background: linear-gradient(to left, #bf8130, #bfb830);
+  background-color: #bf8130;
+  /* background: #2678f3; */
   border-radius: 8px;
   border: 2px solid #ffff;
   color: #ffff;

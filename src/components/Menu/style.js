@@ -1,17 +1,24 @@
 import { Link } from "react-router-dom";
 import { styled } from "styled-components";
+import { MenuUnfoldOutlined } from "@ant-design/icons";
 
 const Wrapper = styled.div`
+  display: flex;
+  /* width: 100%;
+  height: 100%; */
+`;
+
+const IconWrapper = styled.div`
   font-family: "Rubik", sans-serif;
   position: fixed;
-  top: 13px;
-  left: 4px;
+  /* top: 13px;
+  left: 4px; */
   width: 199px;
-  height: 306px;
+  height: 350px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24);
   border-radius: 8px;
   background-color: #ffffff;
-  z-index: 3;
+  /* z-index: 3; */
   padding-left: 12px;
 `;
 const Sale = styled.div`
@@ -19,7 +26,7 @@ const Sale = styled.div`
   top: 4px;
   left: 4px;
   width: 191px;
-  height: 58px;
+  height: 70px;
   background-color: #deffdc;
   border-radius: 8px;
   border: 2px solid #000000;
@@ -62,12 +69,29 @@ const Links = styled(Link)`
   background-color: aliceblue;
 `;
 
+const MenuBar = styled.div`
+  width: 51px;
+  height: 100vh;
+  background-color: #d9d9d9;
+  flex-grow: 0.001;
+`;
+
+const MenuIcon = styled(MenuUnfoldOutlined)`
+  position: absolute;
+  left: 14px;
+  top: 14px;
+  cursor: pointer;
+`;
+
 export {
   Wrapper,
+  IconWrapper,
   Sale,
   SaleReport,
   SaleReportWrapper,
   SaleReportSecond,
   AllLinkswrapper,
   Links,
+  MenuBar,
+  MenuIcon,
 };

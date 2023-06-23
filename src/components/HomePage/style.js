@@ -69,9 +69,9 @@ const Product = styled.div`
 
 const IconWrapper = styled.div`
   font-family: "Rubik", sans-serif;
-  position: fixed;
+  /* position: fixed;
   top: 13px;
-  left: 4px;
+  left: 4px; */
   width: 199px;
   height: 330px;
   box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.24);

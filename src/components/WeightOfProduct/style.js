@@ -57,6 +57,7 @@ const Weight = styled.div`
   font-weight: 700;
   font-size: 24px;
   background-color: #ffff;
+  /* overflow: hidden; */
 `;
 
 export {

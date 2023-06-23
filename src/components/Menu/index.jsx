@@ -1,6 +1,7 @@
 import React from "react";
 import {
   Wrapper,
+  IconWrapper,
   Sale,
   SaleReport,
   SaleReportWrapper,
@@ -8,13 +9,15 @@ import {
   AllLinkswrapper,
   // LinkWrapper,
   Links,
+  MenuBar,
+  MenuIcon,
 } from "./style";
-import Sales from "../Sales";
-import { Routes, Route } from "react-router-dom";
+import { Dropdown } from "antd";
+// import { Routes, Route } from "react-router-dom";
 
 function Menu() {
-  return (
-    <Wrapper>
+  const MenuItems = (
+    <IconWrapper>
       <Sale>
         <SaleReportWrapper>
           <SaleReport>Продажи:{}₽</SaleReport>
@@ -22,16 +25,27 @@ function Menu() {
           <SaleReportSecond>Безнал:{}₽</SaleReportSecond>
         </SaleReportWrapper>
         <AllLinkswrapper>
-          <Links to={"/Sales"}>Приход</Links>
-          <Routes>
-            <Route path="/Sales" component={<Sales />} />
-          </Routes>
-          <Links>История Продажи</Links>
-          <Links>Отход</Links>
-          <Links>Заказ</Links>
-          <Links>Выход</Links>
+          <Links to={"/"}>Приход</Links>
+          <Links to={"/"}>История Продажи</Links>
+          <Links to={"/"}>Отход</Links>
+          <Links to={"/"}>Заказ</Links>
+          <Links to={"/"}>Выход</Links>
         </AllLinkswrapper>
       </Sale>
+    </IconWrapper>
+  );
+  return (
+    <Wrapper>
+      <MenuBar>
+        <Dropdown
+          overlay={MenuItems}
+          placement="bottomRight"
+          arrow={{ pointAtCenter: true }}
+          trigger="click"
+        >
+          <MenuIcon />
+        </Dropdown>
+      </MenuBar>
     </Wrapper>
   );
 }

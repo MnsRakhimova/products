@@ -23,9 +23,16 @@ function WeightOfProduct() {
         </div>
       </ProductWrapper>
       <ProductWeight>
-        <LeftIcon onClick={() => setCount(count - 1)} />
-        <Weight>{count}</Weight>
-        <RigthIcon onClick={() => setCount(count + 1)} />
+        <LeftIcon
+          onClick={() =>
+            //  setCount(count - 0.01)
+            (count) => {
+              if (count <= 0.01) return setCount(count - 0.01);
+              else return 0;
+            }}
+        />
+        <Weight>{count} </Weight>
+        <RigthIcon onClick={() => setCount(count + 0.01)} />
       </ProductWeight>
     </Wrapper>
   );

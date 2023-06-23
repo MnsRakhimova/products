@@ -131,6 +131,7 @@ function HomePage() {
         </CashRegisterLittle>
       </CashRegister>
       {/* <Sales /> */}
+      {/* <WeightOfProduct /> */}
     </Wrapper>
   );
 }
