@@ -125,7 +125,7 @@ function HomePage() {
           </TextWrapperInCashRegister>
         </CashRegisterLittle>
       </CashRegister>
-      <ChangePrice />
+      {/* <ChangePrice /> */}
     </Wrapper>
   );
 }
