@@ -10,8 +10,8 @@ const Wrapper = styled.div`
 
 const MenuBar = styled.div`
   /* position: fixed; */
-  width: 51px;
-  height: 100vh;
+  min-width: 51px;
+  min-height: 100vh;
   background-color: #d9d9d9;
   flex-grow: 0.03;
 `;
@@ -31,7 +31,9 @@ const CashRegisterLittle = styled.div`
   position: absolute;
   top: 3px;
   right: 9px;
+  max-width: 200px;
   width: 160px;
+  min-width: 10px;
   height: 65px;
   background-color: #e1ffdf;
   border: 1px solid #000000;
@@ -63,7 +65,7 @@ const Product = styled.div`
   flex-wrap: wrap;
   left: 7px;
   right: 7px;
-  top: 35px;
+  top: 60px;
   flex-grow: 6;
 `;
 
@@ -131,7 +133,7 @@ const Links = styled(Link)`
 
 const ProductImageWrapper = styled.div`
   position: relative;
-  width: 99px;
+  min-width: 99px;
   height: 59px;
   border: 1px solid #4a909a;
   border-radius: 8px;

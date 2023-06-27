@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import {
   Wrapper,
   ProductImage,
@@ -9,22 +9,26 @@ import {
 } from "./style";
 import Apple from "../../assets/image/GreenApple.png";
 import Button from "../Generic/Button";
+import { PropertiesContext } from "../../context/proporties";
 
-function ProductComing() {
+function ProductComing({ data = {}, gap, onClick }) {
+  // const [state] = useContext(PropertiesContext);
+
+  const { name, cost, price, incomeKG } = data;
   return (
     <Wrapper>
       <div style={{ display: "flex", gap: "5.9px" }}>
         <ProductName>01</ProductName>
         <ProductImage src={Apple} />
-        <ProductName>Яблоко зеленое</ProductName>
+        <ProductName>{name || "no name"}</ProductName>
       </div>
       <ProductPrice>
         <Price>Стоимость</Price>
-        <PriceInput />
+        <PriceInput placeholder={price || ""} />
         <Price>Цена</Price>
-        <PriceInput />
+        <PriceInput placeholder={cost || ""} />
         <Price>Приход</Price>
-        <PriceInput />
+        <PriceInput placeholder={incomeKG || "0кг"} />
         <Button type={"thinGreen"}>Сохранить</Button>
       </ProductPrice>
     </Wrapper>

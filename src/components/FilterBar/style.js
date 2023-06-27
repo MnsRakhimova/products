@@ -3,9 +3,11 @@ import { SearchOutlined } from "@ant-design/icons";
 
 const FilterBar = styled.div`
   display: flex;
+  align-items: center;
+  /* justify-content: center; */
   gap: 3px;
   width: 100vw;
-  height: 23px;
+  height: 50px;
   background-color: #d9d9d9;
   padding-left: 23px;
   position: fixed;
@@ -14,21 +16,21 @@ const FilterBar = styled.div`
 
 const Filtering = styled.div`
   cursor: pointer;
-  width: 23px;
-  height: 14px;
+  width: 50.18px;
+  height: 30.55px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #69b7ff;
   margin-top: 4px;
   font-family: "Rubik", sans-serif;
-  font-size: 10px;
   font-weight: 700;
+  font-size: 20px;
 `;
 
 const InputWrapper = styled.div`
   position: relative;
-  height: 23px;
+  height: 35px;
   margin-left: 33px;
   padding: 8px, 16px, 8px, 16px;
   display: flex;
@@ -42,7 +44,7 @@ const Input = styled.input`
   font-weight: 500;
   font-size: 17px;
   padding-left: 48px;
-  width: 168px;
+  width: 366px;
 `;
 
 const SearchIcon = styled(SearchOutlined)`

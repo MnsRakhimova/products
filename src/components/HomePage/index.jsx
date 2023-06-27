@@ -1,5 +1,4 @@
 import React from "react";
-// import Menu from "../Menu";
 import Apple from "../../assets/image/apple.png";
 import Strawberry from "../../assets/image/strawberry.png";
 import GreenApple from "../../assets/image/GreenApple.png";
@@ -33,13 +32,9 @@ import {
 } from "./style";
 import { Dropdown } from "antd";
 import ProductPage from "../Products";
-
-// import { MenuUnfoldOutlined } from "@ant-design/icons";
+import ChangePrice from "../ChangePrice";
 
 function HomePage() {
-  // function Icon(props) {
-  //   return React.Children.only(props.children);
-  // }
   const MenuItems = (
     <IconWrapper>
       <Sale>
@@ -130,8 +125,7 @@ function HomePage() {
           </TextWrapperInCashRegister>
         </CashRegisterLittle>
       </CashRegister>
-      {/* <Sales /> */}
-      {/* <WeightOfProduct /> */}
+      <ChangePrice />
     </Wrapper>
   );
 }
